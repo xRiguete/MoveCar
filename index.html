@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- MENU SUPERIOR -->
+    <div class="menu">
+
+        <!-- IMAGEM OU NOME DO PROJETO -->
+        <div class="menu-logo">
+            <!-- Substitua pelo caminho da imagem do projeto -->
+            <img src="imgs/logo.png" alt="Logo do projeto">
+        </div>
+
+        <!-- LINKS DO MENU -->
+        <div class="menu-links" id="menuLinks">
+            <a href="#">Menu 1</a>
+            <a href="#">Menu 2</a>
+            <a href="#">Menu 3</a>
+            <a href="#">Menu 4</a>
+        </div>
+
+        <!-- BOTÃO PRINCIPAL -->
+        <div class="menu-botao">
+            <a href="#">Botão 1</a>
+        </div>
+
+        <!-- ÍCONE DO MENU MOBILE -->
+        <div class="menu-mobile" id="menuMobile" role="button" tabindex="0" aria-label="Abrir menu"
+            aria-expanded="false" aria-controls="menuLinks">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- RESTANTE DA PÁGINA -->
+    <div id="rest">
+        <div class="banner">
+            <div class="sombra">
+                <p class="laranja">LIBERDADE PARA <br>EXPLORAR O SEU DESTINO</p>
+                <h1>Alugue um carro <br>e viva <span class="laranja">novas <br>experiências.</span></h1>
+                <p style="color: rgb(172, 172, 172);">conforto, segurança e praticidade <br> para a sua viagem, a trabalho ou a lazer.</p>
+            </div>
+        </div>
+        <div class="infos">
+            <form action="">
+                <div class="info">
+                    <div class="imagem">
+                        <img src="imgs/calendario.svg" alt="">
+                    </div>
+                    <div class="texto">
+                        <label>Retirada</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="imagem">
+                        <img src="imgs/calendario.svg" alt="">
+                    </div>
+                    <div class="texto">
+                        <label>Devolução</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="imagem">
+                        <img src="imgs/localizacao.svg" alt="">
+                    </div>
+                    <div class="texto">
+                        <label>Local de retirada</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="imagem">
+                        <img src="imgs/pessoa.svg" alt="">
+                    </div>
+                    <div class="texto">
+                        <label>Condutor</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <button id="buscar">Buscar veículos →</button>
+            </form>
+        </div>
+        <div class="icons">
+            <div class="icon">
+                <img src="imgs/seguranca.svg" alt="">
+                <p>Segurança</p>
+            </div>
+            <div class="icon">
+                <img src="imgs/carro.png" alt="">
+                <p>Variedade</p>
+            </div>
+            <div class="icon">
+                <img src="imgs/relogio.png" alt="">
+                <p>Atendimento<br>rápido</p>
+            </div>
+            <div class="icon">
+                <img src="imgs/atendimento.svg" alt="">
+                <p>Atendimento</p>
+            </div>
+        </div>
+        <div class="veiculos">
+            <div class="top">
+                <h1>Nossos veículos</h1>
+                <p style="color: #fb5c1e;"><strong>Ver todos →</strong></p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img src="imgs/economy.png" alt="">
+                        <div class="texto">
+                        <h2>Economy</h2>
+                    <p>R$ 99,90<span style="color: gray;"> / dia</span></p>
+                    </div>
+                    <div class="seta">→</div>
+                </div>
+                <div class="card">
+                    <img src="imgs/compacto.png" alt="">
+                    <div class="texto">
+                        <h2>Compacto</h2>
+                        <p>R$ 129,90<span style="color: gray;"> / dia</span></p>
+                    </div>
+                    <div class="seta">→</div>
+                </div>
+                <div class="card">
+                    <img src="imgs/suv.png" alt="">
+                    <div class="texto">
+                        <h2>SUV</h2>
+                        <p>R$ 189,90<span style="color: gray;"> / dia</span></p>
+                    </div>
+                    <div class="seta">→</div>
+                </div>
+                <div class="card">
+                    <img src="imgs/picape.png" alt="">
+                    <div class="texto">
+                        <h2>Picape</h2>
+                        <p>R$ 219,90<span style="color: gray;"> / dia</span></p>
+                    </div>
+                    <div class="seta">→</div>
+                </div>
+            </div>
+        </div>
+        <div class="banner2">
+            <div class="textos">
+                <p class="laranja">VIAJE SEM LIMITES</p>
+                <h2>Descubra novos destinos com mais liberdade.</h2>
+                <button>Reservar agora →</button>
+            </div>
+        </div>
+        <div class="rodape">
+            <div class="logo2">
+                <img src="imgs/logo.png" alt="">
+            </div>
+            <div class="texts">
+                <p>Início</p>
+                <p>Veículos</p>
+                <p>Como funciona</p>
+                <p>Sobre</p>
+                <p>Contato</p>
+            </div>
+            <div class="direitos">
+                <p>©2024 MoveCar Todos os direitos reservados.</p>
+                <p>Política de privacidade  |  Termos de uso</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

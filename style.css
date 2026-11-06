@@ -1,0 +1,367 @@
+/* CONFIGURAÇÃO GERAL */
+:root{
+    --laranja: #fb5c1e;
+}
+* {
+    box-sizing: border-box
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* MENU SUPERIOR - MOBILE FIRST */
+.menu {
+    position: relative;
+    width: 100%;
+    min-height: 70px;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background-color: #ffffff;
+    z-index: 100;
+}
+
+/* IMAGEM DO PROJETO */
+.menu-logo img {
+    display: block;
+    height: auto;
+    width: 45vw;
+}
+
+/* LINKS - ESCONDIDOS NO MOBILE */
+.menu-links {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    padding: 20px;
+    background-color: #ffffff;
+
+    flex-direction: column;
+    gap: 20px;
+
+    box-shadow: 0 4px 8px #00000020;
+    z-index: 101;
+}
+
+/* LINKS QUANDO O MENU ESTIVER ABERTO */
+.menu-links.ativo {
+    display: flex;
+}
+
+/* ESTILO DOS LINKS */
+.menu-links a {
+    color: #222222;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.menu-links a:hover {
+    color: var(--laranja);
+}
+
+/* BOTÃO - ESCONDIDO NO MOBILE */
+.menu-botao {
+    display: none;
+}
+
+.menu-botao a {
+    display: inline-block;
+    padding: 12px 24px;
+
+    background-color: var(--laranja);
+    color: #ffffff;
+
+    text-decoration: none;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+/* ÍCONE MOBILE */
+.menu-mobile {
+    display: block;
+    width: 28px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.menu-mobile span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+
+    background-color: #222222;
+    border-radius: 3px;
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+
+    .menu {
+        min-height: 80px;
+        padding: 15px 5%;
+        gap: 30px;
+    }
+
+    .menu-logo img {
+        max-width: 160px;
+        max-height: 50px;
+    }
+
+    /* LINKS VISÍVEIS NA HORIZONTAL */
+    .menu-links,
+    .menu-links.ativo {
+        position: static;
+        display: flex;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 30px;
+
+        width: auto;
+        padding: 0;
+
+        box-shadow: none;
+    }
+
+    /* BOTÃO VISÍVEL NO DESKTOP */
+    .menu-botao {
+        display: block;
+    }
+
+    /* ÍCONE ESCONDIDO NO DESKTOP */
+    .menu-mobile {
+        display: none;
+    }
+}
+
+/* MOBILE */
+#rest{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.banner{
+    background-image: url(imgs/banner1-mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 10px 0 5px -2px rgba(0, 0, 0,0.3);
+    width: 100%;
+    height: 30vh;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.sombra{
+    padding: 5%;
+    background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
+    height: 100%;
+    
+}
+
+.laranja{
+    color: var(--laranja);
+}
+
+.infos {
+    padding: 5%;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 2vh;
+}
+
+.info{
+    height: 15%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 5% 0;
+    display: flex;
+
+
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.imagem{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    color: gray;
+}
+
+ form button{
+    width: 100%;
+    height: 15%;
+    background-color: var(--laranja);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    padding: 5% 5%;
+
+}
+.icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.icon img{
+    width: 10vw;
+}
+.veiculos{
+    padding: 5%;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+
+.card{
+    width: 100%;
+    height: 7.5vh;
+    border-radius: 10px;
+    margin-bottom: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card img{
+    width: 40%;
+    border-radius: 10px;
+}
+
+.seta {
+    width: 1.5em;
+    height: 1.5em;
+    color: white;
+    font-size: 30px;
+    background: var(--laranja);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.banner2{
+    background-image: url(imgs/banner2-mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 25vh;
+    color: #ffffff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+    padding: 0;
+
+}
+
+.banner2 .textos{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    height: 100%;
+    text-align: left;
+    justify-content: left;
+    align-items: center;
+    background-color: #141f20;
+    padding: 2vh 3vw;
+}
+
+.textos h2{
+    margin-top: 2%;
+}
+
+.textos p{
+    margin: 2%;
+    position: relative;
+    right: 15vw;
+}
+
+.textos button{
+    width: 85%;
+    height: 20%;
+    background-color: var(--laranja);
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+.rodape{
+    width: 100%;
+    height: 25vh;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    padding: 0 2%;
+}
+
+.rodape img{
+    width: 70%;
+}
+
+.texts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.direitos{
+    width: 100%;
+    text-align: center;
+}
+
