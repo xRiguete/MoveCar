@@ -6,10 +6,16 @@
     box-sizing: border-box
 }
 
+html{
+    font-size: 16px;
+}
+
 body {
+    width: 100%;
     padding: 0;
     margin: 0;
     font-family: Arial, sans-serif;
+    font-size: (1rem, 2.5vw, 1.2rem);
 }
 
 /* MENU SUPERIOR - MOBILE FIRST */
@@ -161,7 +167,7 @@ body {
     background-repeat: no-repeat;
     box-shadow: 10px 0 5px -2px rgba(0, 0, 0,0.3);
     width: 100%;
-    height: 30vh;
+    min-height: 30vh;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -169,7 +175,7 @@ body {
 }
 
 .sombra{
-    padding: 5%;
+    padding: 3vh 2vw;
     background: linear-gradient(to right, black, rgba(255, 255, 255, 0));
     height: 100%;
     
@@ -182,15 +188,13 @@ body {
 .infos {
     padding: 5%;
     width: 100%;
-    height: 40vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    bottom: 2vh;
 }
 
 .info{
-    height: 15%;
+    min-height: 15%;
     border-radius: 10px;
     box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
     padding: 10px;
@@ -218,26 +222,40 @@ input{
     border: 1px solid gray;
     border-radius: 5px;
     outline: none;
-    font-size: 16px;
+    font-size: clamp(.7rem, 2vw, 1.2rem);
     width: 100%;
     color: gray;
 }
 
- form button{
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+#buscar{
     width: 100%;
-    height: 15%;
+    min-height: 6vh;
     background-color: var(--laranja);
     color: #ffffff;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 10px;
-    font-size: 22px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: all.7s;
+}
+
+#buscar:hover{
+    color: var(--laranja);
+    background: #ffffff;
+    border: 2px solid var(--laranja);
 }
 
 .icons{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
     justify-content: space-between;
     width: 100%;
-    height: 15%;
+    min-height: 15%;
     padding: 5% 5%;
 
 }
@@ -250,9 +268,15 @@ input{
 }
 
 .icon img{
-    width: 10vw;
+    max-width: 60%;
+    height: auto;
 }
 .veiculos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
     padding: 5%;
 }
 .top{
@@ -260,35 +284,43 @@ input{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 10vh;
+    min-height: 10vh;
+}
+
+.cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
 }
 
 .card{
     width: 100%;
-    height: 7.5vh;
-    border-radius: 10px;
-    margin-bottom: 15%;
+    min-height: 7.5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .card img{
-    width: 40%;
+    max-width: 40%;
+    height: auto;
     border-radius: 10px;
 }
 
 .seta {
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.2em;
+    height: 1.2em;
     color: white;
     font-size: 30px;
     background: var(--laranja);
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     border-radius: 50%;
-    flex-shrink: 0;
 }
 
 .banner2{
@@ -297,10 +329,10 @@ input{
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 25vh;
+    min-height: 25vh;
     color: #ffffff;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: right;
     padding: 0;
 
@@ -310,37 +342,35 @@ input{
     display: flex;
     flex-direction: column;
     width: 70vw;
-    height: 100%;
+    min-height: 25vh;
     text-align: left;
-    justify-content: left;
-    align-items: center;
+    align-self: stretch;
+    justify-content: center;
+    align-items: left;
     background-color: #141f20;
     padding: 2vh 3vw;
 }
 
-.textos h2{
-    margin-top: 2%;
-}
-
-.textos p{
-    margin: 2%;
-    position: relative;
-    right: 15vw;
-}
-
-.textos button{
+#reservar{
     width: 85%;
-    height: 20%;
+    height: 5vh;
     background-color: var(--laranja);
     color: #ffffff;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 20px;
-    font-size: 22px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: all .7s;
+}
+
+#reservar:hover{
+    color: var(--laranja);
+    background: transparent;
+    border: 2px solid var(--laranja);
 }
 
 .rodape{
     width: 100%;
-    height: 25vh;
+    min-height: 25vh;
     color: gray;
     display: flex;
     flex-direction: column;
@@ -350,7 +380,8 @@ input{
 }
 
 .rodape img{
-    width: 70%;
+    max-width: 70%;
+    height: auto;
 }
 
 .texts{
@@ -363,5 +394,199 @@ input{
 .direitos{
     width: 100%;
     text-align: center;
+}
+
+.sumir{
+    display: none;
+}
+
+.final{
+    width: 100%;
+}
+
+
+/* PC */
+
+@media (min-width: 1024px){
+    .banner{
+        background-image: url(imgs/banner1-desktop.png);
+        min-height: 60vh;
+    }
+    .sombra{
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        min-height: 60vh;
+        padding: 7vh;
+    }
+    .centralizar{
+        min-height: 4vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1vh;
+    }
+    .infos{
+        min-height: 100%;
+        max-width: 95vw;
+        border-radius: 15px;
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        padding: .5vh 4vw;
+        margin: 0;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.692);
+        form{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-content: space-between;
+            align-items: center;
+        }
+        input{
+            max-width: 100%;
+        }
+        .info{
+            gap:1vw;
+        }
+        img{
+            height: 1.5rem;
+        }
+        label{
+            font-weight: bold;
+            opacity: .6;
+        }
+
+    }
+    
+    #buscar{
+        max-height: 10vh;
+    }
+
+    .icons{
+        max-height: 7.5vh;
+        margin: 3vh 0;
+        gap: 4vw;
+    }
+
+    .icon{
+        flex-direction: row;
+        max-height: 7.5vh;
+        font-size: clamp(1rem, 3vw, 1.3rem);
+        gap: 1vw;
+        img{
+            max-width: 3rem;
+        }
+    }
+
+    .ladodir{
+        text-align: left;
+        .bold{
+            font-weight: bold;
+        }
+    }
+
+    .sumir{
+        display: block ;
+        font-weight: normal;
+    }
+
+    .cards{
+        flex-direction: row;
+    }
+    .card{
+        min-height: 60vh;
+        flex-direction: column;
+        flex: 1;
+        padding: .5rem 0;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.692);
+        border-radius: 1rem;
+        align-items: left;
+        justify-content: end;
+        transition: all .5s;
+
+        .texto{
+            width: 100%;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        h2{
+            margin: .4rem 0;
+        }
+        .sumir{
+            margin: .2rem;
+        }
+    }
+
+    .card:hover{
+        transform: scale(1.05);
+    }
+
+    .seta{
+        display: none;
+    }
+    .preco{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 .5rem;
+        p{
+            flex: 1;
+            font-weight: bold;
+
+        }
+        span{
+            font-weight: normal;
+        }
+    }
+    #detalhes{
+        flex: 1;
+        height: 2.3rem;
+        border: none;
+        background: var(--laranja);
+        color: #ffffff;
+        border-radius: .5rem;
+        transition: all .7s;
+    }
+    #detalhes:hover{
+        transform: translateY(-.5vh);
+    }
+
+    .banner2{
+        min-height: 50vh;
+        padding: 0;
+    }
+    .banner2 .textos{
+        min-height: 50vh;
+        width: 60%;
+        padding-right: 15vw;
+        font-size: clamp(1.2rem, 5vw, 1.4rem);
+        h2{
+            font-size: clamp(1.7rem, 10vw, 2rem);
+        }
+    }
+
+    #reservar{
+        min-height: 6vh;
+    }
+    .rodape{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: min(3em, 4%);
+        gap: 2vw;
+        img{
+            max-width: 50%;
+            height: auto;
+        }
+        .logo2, .texts, .direitos{
+            flex: 1;
+        }
+        .direitos{
+            text-align: right;
+        }
+    }
+
+
+
 }
 
